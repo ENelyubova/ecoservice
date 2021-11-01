@@ -1,0 +1,342 @@
+.header{
+	height: 100px;
+	width: 100%;
+	&-home{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+		.header-content{
+			border-bottom: 1px solid rgba(255,255,255,.3);
+		}
+		.header-menu{
+			ul{
+				li{
+					&.submenuItem {
+						> a{
+							&:before{
+								content: url(../images/icon/down.svg);
+							}
+						}
+					}
+					a{
+						color: $color-white;
+					}
+					ul{
+						li{
+							a{
+								color: $color-black;
+							}
+						}
+					}
+				}
+			}
+		}
+		.header-lang{
+			color: $color-white;
+		}
+	}
+	&-page{
+		position: relative;
+		.header-content{
+			border-bottom: 1px solid #D9DDE8;
+		}
+		.header-menu{
+			ul{
+				li{
+					&.submenuItem {
+						> a{
+							&:before{
+								content: url(../images/icon/down-black.svg);
+							}
+						}
+					}
+					a{
+						color: $color-black;
+					}
+					ul{
+						li{
+							a{
+								color: $color-black;
+								&:before{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.header-lang{
+			color: $color-black;
+		}
+		.header-burger{
+			svg{
+				fill: $color-black;
+			}
+		}
+	}
+
+	&-content{
+		height: 100%;
+	}
+	&-logo{
+		width: 25%;
+		height: 100%;
+	}
+	&-menu{
+		width: 62%;
+		height: 100%;
+		margin: 0 15px;
+		&__main{
+			height: 100%;
+		}
+		ul{
+			display: flex;
+			height: 100%;
+			/* width: 100%;*/
+			li{
+				position: relative;
+				display: flex;
+				align-items: center;
+				padding-right: 40px;
+				cursor: pointer;
+				&.submenuItem {
+					> a{
+						&:before{
+							position: absolute;
+							right: -15px;
+							top: 49%;
+							transform: translateY(-50%) rotate(0deg);
+							-webkit-transform: translateY(-50%) rotate(0deg);
+							transition: .3s;
+						}
+					}
+					&:hover{ 
+				    	a{
+				    		&:before{
+					    		transform: translateY(-12%) rotate(180deg);
+					    		-webkit-transform: translateY(-12%) rotate(180deg);
+					    	} 
+				    	}
+				    }
+				}
+				a{
+					position: relative;
+					outline: none;
+					text-decoration: none;
+					transition: .3s;
+					font-family: $formular;
+					font-size: 16px;
+					font-weight: 400;
+				}
+				ul{
+	                display: flex;
+	                flex-direction: column;
+	                align-items: flex-start;
+	                position: absolute;
+	                top: 100%;
+	                left: 0;
+	                /* width: 250px;*/
+	                padding: 10px 30px !important;
+	                width: -webkit-max-content;
+	                width: -moz-max-content;
+	                width: max-content;
+	                height: auto;
+	                background-color: $color-white; 
+	                border: 1px solid #D9DDE8;
+	                filter: drop-shadow(0px 20px 25px rgba(55, 65, 74, 0.1));
+	                transition: .3s;
+	                opacity: 0;
+	                visibility: hidden;
+	                z-index: 15;
+	                &:before{
+	                	content: '';
+	                	background-image: url(../images/icon/treangle.png);
+	                	background-repeat: no-repeat;
+	                	background-size: contain;
+					    position: absolute;
+					    left: 20px;
+					    top: -11px;
+					    width: 20px;
+					    height: 12px;
+					    z-index: -1;
+	                }
+	                li{
+	                	width: 100%;
+	                    padding: 0 !important;
+	                    a{
+	                    	display: block;
+	                        padding: 15px 0;
+	                        width: 100%;
+	                    	word-wrap: break-word;
+	                    	transition: .3s;
+	                    	@include fontF($formular500, 16px, 500, $color-black);
+	                        &:after{
+	                            display: none;
+	                        }
+	                    }
+	                    &:not(:last-child){
+	                    	border-bottom: 1px solid #D9DDE8;
+	                    }
+	                    &:hover{
+	                        a{
+	                        	color: $color-green;
+	                        }
+	                    }
+	                }
+	            }
+	            &:hover{
+	            	a{
+			    		opacity: .7;
+	            	}
+	            	ul{
+	                    opacity: 1;
+	                    visibility: visible;
+	                }
+	            }	
+				&:last-child{
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	&-nav{
+		position: relative;
+		width: 13%;
+	}
+	&-search{
+		position: relative;
+		width: 20px;
+		&-mobile{
+			display: none;
+		}
+	}
+	&-lang{
+		width: 32px;
+		margin: 0 25px;
+		font-size: 16px;
+	}
+	&-burger{
+		width: 28px;
+	}
+	.hide-header{
+        display: none;
+    }
+}
+.logo{
+	padding: 13px;
+	width: 80%;
+	height: 100%;
+	background-color: $color-white;
+	img{
+		max-height: 64px;
+	}
+	span{
+		margin-left: 12px;
+		@include fontF($formular700, 20px, 700, #439486);
+	}
+}
+
+@media (min-width: 1860px){
+	.header{
+		&-menu{
+			ul li a{
+				font-size: 18px;
+			}
+		}
+		&-burger{
+			width: 47px;
+			svg{
+				width: 47px;
+				height: 35px;
+			}
+		}
+	}
+	.logo{
+		width: 66%;
+		img{
+			max-height: 74px;
+		}
+		span{
+			font-size: 25px;
+		}
+	}
+}
+@media (max-width: 1280px){
+	.header{
+		height: 80px;
+		&-menu{
+			&__catalog{
+				margin-right: 25px;
+			}
+			ul{
+				li{
+					padding-right: 25px;
+					ul{
+						padding: 10px 25px !important;
+					}
+				}
+			}
+		}
+	}
+	.logo{
+		img{
+		    max-height: 50px;
+		}
+		span{
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 1000px){
+	.header{
+		&-logo{
+			width: auto;
+		}
+		&-menu{
+			display: none;
+		}
+		&-nav{
+			width: auto;
+		}
+		&-search{
+			/* &-top{*/
+				.form{
+					display: none;
+				}
+			/* }*/
+			&-mobile{
+				display: block;
+			}
+		}
+	}
+	.logo{
+		width: auto;
+	}
+}
+
+@media (max-width: 767px){
+	.header{
+		height: 60px;
+		&-lang{
+			margin: 0 15px;
+		}
+		&-burger{
+			width: 24px;
+			svg{
+				width: 24px;
+			}
+		}
+	}
+	.logo{
+		padding: 10px;
+		img{
+			max-height: 40px;
+		}
+		span{
+			font-size: 12px;
+		}
+	}
+}

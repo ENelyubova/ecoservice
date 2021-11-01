@@ -1,0 +1,97 @@
+.page-404{
+    background-color: $color-darkblue;
+    background-image: url(../images/404/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .header-home{
+        position: relative;
+    }
+}
+.page-error{
+    padding: 50px 0;
+    &__img{
+        width: 41%;
+    }
+    &__text{
+        width: 41%;
+    }
+    p{
+        @include fontF($formular500, 18px, 500, $color-white);
+    }
+    a{
+        display: block;
+        margin-top: 25px;
+        text-decoration: underline;
+        color: $color-briz;
+    }
+}
+.footer-404{
+    &__info{
+        width: 41%;
+        padding-right: 30px;
+        font-size: 14px;
+        color: $color-white;
+    }
+    &__contacts{
+        width: 32%;
+        padding-right: 30px;
+        a{
+            @include fontF($formular500, 18px, 500, $color-white);
+            + a {
+                margin-top: 15px;
+            }
+        }
+    }
+    &__dc56{
+        width: 25%;
+        p{
+            color: $color-white !important;
+        }
+        a{
+            background-image: url(../images/icon/DC-white.svg) !important;
+        }
+    }
+}
+
+@media (max-width: 1440px){
+     .page-error{
+        &__text{
+            width: 59%;
+        }
+        p{
+            font-size: 16px;
+         }
+     }
+}
+@media (max-width: 1000px){
+     .footer-404{
+        &__item{
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+        }
+        &__info{
+            width: 100%;
+        }
+        &__contacts{
+            width: 100%;
+            a{
+                font-size: 16px;
+            }
+        }
+        &__dc56{
+            width: 100%;
+        }
+     }
+}
+@media (max-width: 767px){
+    .page-error{
+        padding: 0 0 50px;
+        &-wrap{
+            flex-direction: column;
+        }
+        &__img, &__text{
+            width: 100%;
+        }
+    }
+}

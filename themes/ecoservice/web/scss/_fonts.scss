@@ -1,0 +1,53 @@
+$formular: 'Formular, sans-serif';
+$formular500: 'Formular-Medium, sans-serif';
+$formular700: 'Formular-Bold, sans-serif';
+$formular900: 'Formular-Black, sans-serif';
+$icomoon: 'icomoon';
+
+@font-face {
+  font-family: $formular;
+  src: url('../fonts/Formular.ttf');
+  src: local('Formular'), local('Formular'),
+      url('../fonts/Formular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $formular500;
+  src: url('../fonts/Formular-Medium.ttf');
+  src: local('Formular'), local('Formular'),
+      url('../fonts/Formular-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $formular700;
+  src: url('../fonts/Formular-Bold.ttf');
+  src: local('Formular'), local('Formular'),
+      url('../fonts/Formular-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $formular900;
+  src: url('../fonts/Formular-Black.ttf');
+  src: local('Formular'), local('Formular'),
+      url('../fonts/Formular-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $icomoon;
+  src:  url('../fonts/icomoon.eot?na6e8g');
+  src:  url('../fonts/icomoon.eot?na6e8g#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?na6e8g') format('truetype'),
+    url('../fonts/icomoon.woff?na6e8g') format('woff'),
+    url('../fonts/icomoon.svg?na6e8g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

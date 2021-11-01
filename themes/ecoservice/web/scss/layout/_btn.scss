@@ -1,0 +1,85 @@
+/* Кнопки */ 
+.btn{
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover, &:active{
+        outline: none !important;
+        box-shadow: none !important;
+        /* color: $color-white;*/
+        transition: all 0.3s linear;
+    }
+    &:focus{
+        outline: thin dotted;
+        /* color: $color-white;*/
+    }
+}
+.btn-blur{
+    position: relative;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 50px;
+    @include fontF($formular500, 16px, 500, $color-white);
+    &:hover, &:active{
+        color: $color-white;
+        background: rgba(255,255,255,0.2);
+    }
+    &:focus{
+        color: $color-white;
+        background: rgba(255,255,255,0.2);
+    }
+}
+.btn-green{
+    position: relative;
+    padding: 15px 25px;
+    background: #00CEAA;
+    border-radius: 50px;
+    @include fontF($formular500, 16px, 500, $color-white);
+    &:hover, &:active{
+        color: $color-white;
+        background-color: #04987e;
+    }
+    &:focus{
+        color: $color-white;
+        background-color: #04987e;
+    }
+}
+.btn-link{
+    position: relative;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-position: under;
+    @include fontF($formular500, 16px, 500, $color-darkbriz);
+    &:hover, &:active, &:focus{
+        color: $color-darkbriz;
+    }
+}
+@media (min-width: 1860px){
+    .btn{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1400px){
+    .btn{
+        /* font-size: 16px;*/
+    }
+}
+@media (max-width: 1270px){
+    .btn{
+        font-size: 16px;
+    }
+}
+@media (max-width: 1000px){
+    
+}
+@media (max-width: 767px){
+    .btn{
+        /* padding: 12px 15px;*/
+    }
+}

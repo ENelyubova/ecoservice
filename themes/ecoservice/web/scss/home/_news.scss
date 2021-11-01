@@ -1,0 +1,149 @@
+.news{
+	background-color: $color-gray;
+	&-nav{
+		margin-right: 30px;
+	}
+	&-heading{
+		margin: 10px 30px 10px 0;
+	}
+	&-link{
+		margin: 10px 0 10px;
+	}
+	&-panel{
+		.slick-list{
+			overflow: visible;
+		}
+	}
+	&-block{
+		position: relative;
+		width: calc(100% + 20px);
+		margin: 0 -10px;
+		&__item{
+			position: relative;
+			width: calc(100% / 3 - 20px);
+			height: 410px;
+			margin: 0 10px;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 0.3s linear;
+			&:hover{
+				box-shadow: 0px 15px 20px rgba(13, 37, 40, 0.2);
+				.news-block__img{
+					img{
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		&__img{
+		    img{
+				transition: all 1s ease-out;
+		    }
+	    }
+	    &__body{
+	    	position: absolute;
+	    	width: 100%;
+	    	height: 100%;
+	    	left: 0;
+	    	top: 0;
+	    	padding: 20px;
+			background: linear-gradient(180deg, rgba(153, 153, 153, 0.16) 0%, rgba(69, 69, 69, 0.4) 100%);
+			z-index: 10;
+	    }
+	    &__date{
+	    	position: relative;
+			margin-bottom: 10px;
+			color: $color-white;
+		}
+		&__title{
+			line-height: 1.4;
+			@include fontF($formular500, 18px, 500, $color-white);
+		}
+	}
+}
+/* Все новости */
+.page-news{
+	.news-block{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 0;
+		&__item{
+			margin-bottom: 20px;
+		}
+	}
+}
+.news-btn-all{
+	width: 100%;
+	text-align: center;
+	.btn{
+		/* font-size: 22px;*/
+	}
+}
+
+@media (min-width: 1860px){
+	.news-block__item{
+		height: 440px;
+	}
+	.page-news{
+		.news-block__item{
+		    width: calc(100% / 4 - 20px);
+		}
+	}
+}
+@media (max-width: 1440px){
+	.news-block__item{
+		height: 370px;
+	}
+}
+@media (max-width: 1280px){
+	.news-block{
+		&__item{
+			height: 330px;
+		}
+		&__title{
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 1280px){
+	.page-news{
+		.news-block__item{
+		    width: calc(100% / 2 - 20px);
+		}
+	}
+}
+@media (max-width: 767px){
+	.news-block{
+		&__item{
+			height: 300px;
+		}
+		&__title{
+			line-height: 1;
+		}
+	}
+}
+@media (max-width: 480px){
+	.news{
+		&-panel{
+			.slick-list{
+				overflow: hidden;
+			}
+		}
+		&-block__item{
+			width: 100%;
+		}
+	}
+	.page-news{
+		.news-block{
+			width: 100%;
+			margin: 0;
+			&__item{
+			    width: 100%;
+			    margin-bottom: 20px;
+			    &:hover{
+		    	    box-shadow: none;
+			    }
+			}
+		}
+	}
+}

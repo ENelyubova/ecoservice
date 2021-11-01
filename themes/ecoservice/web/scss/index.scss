@@ -1,0 +1,44 @@
+@import "_fonts";
+@import "_mixins";
+@import "_style";
+@import "_block";
+
+@import "./config/_config";
+@import "./config/_animate";
+@import "./config/_inner";
+@import "./config/_404";
+
+@import "./layout/_btn";
+@import "./layout/_header";
+@import "./layout/_footer";
+@import "./layout/_search";
+@import "./layout/_mobile-menu";
+@import "./layout/_modal-menu";
+@import "./layout/_modal";
+
+@import "./slick/_slick";
+@import "./slick/_slick-theme";
+
+@import "./home/_slider";
+@import "./home/_catalog-home";
+@import "./home/_project";
+@import "./home/_about";
+@import "./home/_partners";
+@import "./home/_contacts";
+
+@import "./home/_news";
+@import "./home/_news-inner";
+
+@import "./page/_contacts";
+
+@import "./store/_category";
+@import "./store/_catalog";
+@import "./store/_product-view";
+@import "./store/_contacts-form";
+
+
+
+
+
+
+

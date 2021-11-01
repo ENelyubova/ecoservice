@@ -1,0 +1,76 @@
+.catalog{
+	&-title{
+		width: 32%;
+		padding-right: 50px;
+		word-break: keep-all;
+	}
+	&-block{
+		width: 67%;
+		&__item{
+			width: calc(100% / 2 - 20px);
+		}
+	}
+}
+.catalog-item{
+	padding: 20px 0 40px;
+	border-bottom: 1px solid $color-bordercolor;
+	&:nth-child(1), &:nth-child(2){
+		border-top: 1px solid $color-bordercolor;
+	}
+	&__name{
+		display: block;
+		padding-bottom: 10px;
+		@include fontF($formular500, 24px, 500, $color-black);
+		&:hover{
+			color: $color-darkbriz; 
+		}
+	}
+}
+
+@media (max-width: 1440px){
+	.catalog-item{
+		padding: 20px 0 25px;
+		&__name{
+			font-size: 21px;
+		}
+	}
+}
+@media (max-width: 1280px){
+	.catalog-item{
+		br{
+			display: none;
+		}
+		&__name{
+			font-size: 19px;
+		}
+	}
+}
+@media (max-width: 1000px){
+	.catalog{
+		&-title{
+			width: 100%;
+			padding-right: 0;
+		}
+		&-block{
+			width: 100%;
+			margin-top: 30px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.catalog-item{
+		padding: 20px 0;
+		font-size: 14px;
+		&__name{
+			font-size: 18px;
+		}
+		&:nth-child(2){
+			border-top: none;
+		}
+	}
+}
+@media (max-width: 600px){
+	.catalog-block__item{
+		width: 100%;
+	}
+}
